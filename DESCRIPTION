@@ -1,11 +1,8 @@
 Package: linktest
 Title: Test linking to RcppCCTZ
 Version: 0.0.0.9000
-Authors@R: 
-    person(given = "Leonardo",
-           family = "Silvestri",
-           role = c("aut", "cre"),
-           email = "lsilvestri@ztsdb.org")
+Author: Leonardo Silvestri
+Maintainer: Leonardo Silvestri <lsilvestri@ztsdb.org>
 Description: A minimal package so we can test linking to RcppCCTZ.
 Depends: RcppCCTZ
 LinkingTo: Rcpp, RcppCCTZ
