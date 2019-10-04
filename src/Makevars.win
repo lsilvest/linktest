@@ -1,0 +1,6 @@
+PKG_CPPFLAGS = -std=c++1y
+PKG_LDFLAGS = 
+PKG_LIBS = -lstdc++ -ldl `${R_HOME}/bin/Rscript -e "cat(sprintf('%s/RcppCCTZ/libs%s/RcppCCTZ%s', \
+installed.packages()['RcppCCTZ','LibPath'][1], \
+Sys.getenv('R_ARCH'), \
+.Platform[['dynlib.ext']]))"`

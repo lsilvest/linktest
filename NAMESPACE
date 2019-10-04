@@ -1,0 +1,3 @@
+useDynLib(linktest)
+import("RcppCCTZ")
+export(convertToSeconds)

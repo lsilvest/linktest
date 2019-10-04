@@ -1,0 +1,2 @@
+PKG_LDFLAGS = 
+PKG_LIBS = -lstdc++ -ldl `${R_HOME}/bin/Rscript -e "cat(sprintf('%s/RcppCCTZ/libs/RcppCCTZ%s', installed.packages()['RcppCCTZ','LibPath'][1], .Platform[['dynlib.ext']]))"`

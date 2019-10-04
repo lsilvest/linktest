@@ -1,0 +1,15 @@
+Package: linktest
+Title: Test linking to RcppCCTZ
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Leonardo",
+           family = "Silvestri",
+           role = c("aut", "cre"),
+           email = "lsilvestri@ztsdb.org")
+Description: A minimal package so we can test linking to RcppCCTZ.
+Depends: RcppCCTZ
+LinkingTo: Rcpp, RcppCCTZ
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
