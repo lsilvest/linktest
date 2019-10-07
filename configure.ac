@@ -6,7 +6,9 @@ FULL_PATH_RCPPCCTZ=`${R_HOME}/bin/Rscript -e "cat(sprintf('%s/RcppCCTZ/libs/Rcpp
 dnl A user-specifiable option
 UNAME=`uname`
 if [[ "$UNAME" = "Darwin" ]] ; then
-   CHANGE_INSTALL_NAME=".PHONY: all change_install_name\nchange_install_name: $(SHLIB)\n\tinstall_name_tool -change `${RCPPCCTZ}` `${FULL_PATH_RCPPCCTZ}` ${SHLIB}"
+   CHANGE_INSTALL_NAME=".PHONY: all change_install_name
+change_install_name: $(SHLIB)
+	install_name_tool -change ${RCPPCCTZ} ${FULL_PATH_RCPPCCTZ} ${SHLIB}"
 else
    CHANGE_INSTALL_NAME=""
 fi
