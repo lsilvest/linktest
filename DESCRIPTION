@@ -1,9 +1,9 @@
 Package: linktest
-Title: Test linking to RcppCCTZ
-Version: 0.0.0.9000
+Title: Test Linking to Another Package
+Version: 0.1
 Author: Leonardo Silvestri
 Maintainer: Leonardo Silvestri <lsilvestri@ztsdb.org>
-Description: A minimal package so we can test linking to RcppCCTZ.
+Description: A minimal package where we test we can link to RcppCCTZ.
 Depends: RcppCCTZ
 LinkingTo: Rcpp, RcppCCTZ
 License: GPL (>= 2)

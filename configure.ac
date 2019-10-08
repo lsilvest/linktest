@@ -1,7 +1,7 @@
-AC_INIT([linktest], 0.0.0.9000) dnl package name, version
+AC_INIT([linktest], 0.1) dnl package name, version
 
 RCPPCCTZ=`"${R_HOME}/bin/Rscript" -e "cat(sprintf('RcppCCTZ%s', .Platform[[['dynlib.ext']]]))" 2> /dev/null`
-FULL_PATH_RCPPCCTZ=`${R_HOME}/bin/Rscript -e "cat(sprintf('%s/RcppCCTZ/libs/RcppCCTZ%s', installed.packages()[['RcppCCTZ','LibPath']][[1]], .Platform[[['dynlib.ext']]]))" 2> /dev/null`
+FULL_PATH_RCPPCCTZ=`${R_HOME}/bin/Rscript -e "cat(file.path(installed.packages()[['RcppCCTZ','LibPath']][[1]],'RcppCCTZ','libs',paste0('RcppCCTZ',.Platform[[['dynlib.ext']]])))" 2> /dev/null`
 
 dnl A user-specifiable option
 UNAME=`uname`
