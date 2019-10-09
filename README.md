@@ -55,12 +55,16 @@ lsilvest:~/repos$ otool -L /usr/local/lib/R/3.5/site-library/linktest/libs/linkt
 	/usr/local/lib/gcc/8/libgcc_s.1.dylib (compatibility version 1.0.0, current version 1.0.0)
 ~~~
 
-In order to generate this we add an additional target to `Makevars` (as per https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Using-Makevars):
+In order to generate this we add an additional target to `Makevars` as described in [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Using-Makevars):
 
 ~~~ Makefile
 .PHONY: all change_install_name
 change_install_name: linktest.so
 	install_name_tool -change RcppCCTZ.so /usr/local/lib/R/3.6/site-library/RcppCCTZ/libs/RcppCCTZ.so linktest.so
 ~~~
+
+This additional target is added via a `configure` script also
+described in [Writing R
+Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Configure-example).
 
 See branch `install_libs` for an alternative method.
