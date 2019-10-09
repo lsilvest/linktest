@@ -13,7 +13,7 @@ is however a little bit more work to do to make this portable. In
 particular Windows and MacOS need a bit more help. In the Windows
 case, the library location needs to also indicate the archicture. In
 the MacOS case, we need to tweak the produced dynamic library to
-ensure it has the correct path to the library it
+ensure it has the correct path to the library it references.
 
 Here we present a solution based on the `install.libs.R` file.
 
