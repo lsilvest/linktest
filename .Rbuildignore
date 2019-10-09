@@ -1,0 +1,7 @@
+.travis.yml
+^.*\.Rproj$
+^\.Rproj\.user$
+^local.*
+.*\.tar\.gz
+^CRAN
+^src/unused
