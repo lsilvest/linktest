@@ -1,0 +1,3 @@
+CXX_STD = CXX11
+PKG_LIBS = -lstdc++ -ldl "`${R_HOME}/bin/Rscript -e "cat(file.path(installed.packages()['RcppCCTZ','LibPath'][1],\
+'RcppCCTZ','libs',paste0('RcppCCTZ','${SHLIB_EXT}')))"`"
